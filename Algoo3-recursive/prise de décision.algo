@@ -1,0 +1,41 @@
+ALGORITHM Ticket Pricing
+VAR
+    age : INTEGER := 0;
+    price : INTEGER := 0;
+BEGIN
+    Prompt "Please enter your age: ";
+    Read age;
+    SWITCH (age) DO
+        case age <= 12 : 
+        price = 10
+        break;
+
+       age >= 13 And age <= 17 : 
+       price = 15
+       break;
+
+        default : price = 20
+    END_SWITCH
+    display "The price of the ticket is: $" + price
+
+END
+
+
+ALGORITHM Weather Clothing Adviser
+VAR
+    raining : STRING;
+    advice : STRING;
+BEGIN
+    Prompt "Is it raining (yes/no)? "
+    Read raining
+SWITCH (raining) DO
+    case raining == 'yes' :
+    advice = "Bring an umbrella"
+    break;
+
+    default :
+    advice = "No need for an umbrella"
+END_SWITCH
+
+Display advice
+END
